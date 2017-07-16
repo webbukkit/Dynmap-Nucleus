@@ -91,7 +91,7 @@ public class DynmapNucleus {
         
         public Layer(String id, CommentedConfigurationNode cfg, String deflabel, String deficon, String deflabelfmt) {
             set = markerapi.getMarkerSet("nucleus." + id);
-            CommentedConfigurationNode lcfg = cfg.getNode("layer", id);
+            CommentedConfigurationNode lcfg = cfg.getNode("config", "layer", id);
             if(set == null)
                 set = markerapi.createMarkerSet("nucleus."+id, lcfg.getNode("name").getString(deflabel), null, false);
             else
@@ -215,7 +215,7 @@ public class DynmapNucleus {
         
         public HomesLayer(CommentedConfigurationNode cfg, String fmt) {
             super("homes", cfg, "Homes", "house", fmt);
-            CommentedConfigurationNode lcfg = cfg.getNode("layer", "homes");
+            CommentedConfigurationNode lcfg = cfg.getNode("config", "layer", "homes");
             //online_only = lcfg.getNode("online-only").getBoolean(false);
             if(online_only) {
                 OurPlayerListener lsnr = new OurPlayerListener();
@@ -386,9 +386,9 @@ public class DynmapNucleus {
             reload = true;
         }
         /* Check which is enabled */
-        if(cfg.getNode("layer", "homes", "enable").getBoolean(true) == false)
+        if(cfg.getNode("config", "layer", "homes", "enable").getBoolean(true) == false)
             homes_api = null;
-        if(cfg.getNode("layer", "warps", "enable").getBoolean(true) == false)
+        if(cfg.getNode("config", "layer", "warps", "enable").getBoolean(true) == false)
             warp_api = null;
         
         /* Now, add marker set for homes */
@@ -399,7 +399,7 @@ public class DynmapNucleus {
             warplayer = new WarpsLayer(cfg, "[%name%]");
         
         /* Set up update job - based on period */
-        double per = cfg.getNode("update","period").getDouble(5.0);
+        double per = cfg.getNode("config", "update","period").getDouble(5.0);
         if(per < 2.0) per = 2.0;
         updperiod = (long)(per*20.0);
         stop = false;
