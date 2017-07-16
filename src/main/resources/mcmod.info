@@ -1,0 +1,12 @@
+[{
+    "modid": "dynmap-nucleus",
+    "name": "Dynmap-Nucleus",
+    "version":  "${project.version}-${BUILD_NUMBER}",
+    "description": "Nucleus support for Dynmap",
+    "authorList": [
+		"mikeprimm"
+    ],
+    "dependencies": [
+        "dynmap", "nucleus"
+    ]
+}]
