@@ -69,7 +69,7 @@
   
   <groupId>us.dynmap</groupId>
   <artifactId>Dynmap-Nucleus</artifactId>
-  <version>0.2</version>
+  <version>0.3-S6.0</version>
   <name>Dynmap for Nucleus</name>
   <description>Dynmap plugin for Nucleus</description>
 </project>
