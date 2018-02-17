@@ -41,7 +41,7 @@
   	</repository>
   	<repository>
   		<id>nucleus</id>
-  		<url>http://repo.drnaylor.co.uk/artifactory/list/minecraft</url>
+  		<url>https://repo.drnaylor.co.uk/artifactory/list/minecraft</url>
   	</repository>
   	<repository>
   		<id>dynmap</id>
@@ -53,7 +53,7 @@
   	<dependency>
   		<groupId>org.spongepowered</groupId>
   		<artifactId>spongeapi</artifactId>
-  		<version>6.0.0</version>
+  		<version>7.0.0</version>
   	</dependency>
   	<dependency>
   		<groupId>us.dynmap</groupId>
@@ -63,13 +63,13 @@
   	<dependency>
   		<groupId>io.github.nucleuspowered</groupId>
   		<artifactId>nucleus-api</artifactId>
-  		<version>1.0.0-SNAPSHOT-S6.0</version>
+  		<version>1.3.0-SNAPSHOT-S7.0</version>
   	</dependency>
   </dependencies>
   
   <groupId>us.dynmap</groupId>
   <artifactId>Dynmap-Nucleus</artifactId>
-  <version>0.2</version>
+  <version>0.3-S7.0</version>
   <name>Dynmap for Nucleus</name>
   <description>Dynmap plugin for Nucleus</description>
 </project>
